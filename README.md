@@ -1,4 +1,4 @@
-# HTML to PDF Converter PCF (Canvas-first)
+# HTML to PDF Converter PCF
 
 Power Apps PCF control for Canvas apps that renders trusted HTML with an inline preview and supports:
 - Print (browser print dialog / Save as PDF)
@@ -6,9 +6,9 @@ Power Apps PCF control for Canvas apps that renders trusted HTML with an inline 
 - Export PDF as Base64 for external data sources (for example SharePoint via Power Automate)
 - Canvas-triggered action commands (`print`, `download`)
 
-![GitHub release](https://img.shields.io/github/v/release/Just-Boring-Cat/-html-pdf-converter-pcf?label=release)
-![License](https://img.shields.io/github/license/Just-Boring-Cat/-html-pdf-converter-pcf)
-![Last commit](https://img.shields.io/github/last-commit/Just-Boring-Cat/-html-pdf-converter-pcf)
+![GitHub release](https://img.shields.io/github/v/release/Just-Boring-Cat/html-pdf-converter-pcf?label=release)
+![License](https://img.shields.io/github/license/Just-Boring-Cat/html-pdf-converter-pcf)
+![Last commit](https://img.shields.io/github/last-commit/Just-Boring-Cat/html-pdf-converter-pcf)
 
 ## Visual preview
 
@@ -67,6 +67,24 @@ Then paste HTML into the `html` property in the PCF harness and test:
 - `actionCommand` triggers
 - page-marker `div` segmentation
 
+## Build the Dataverse solution (managed/unmanaged)
+
+This repository includes the solution packaging project and version-bump script required to build importable Dataverse solution zip files.
+
+```bash
+dotnet build solution/Html_to_PDF_Component_Solution/Html_to_PDF_Component_Solution.cdsproj -c Release
+```
+
+Managed-only build:
+
+```bash
+dotnet build solution/Html_to_PDF_Component_Solution/Html_to_PDF_Component_Solution.cdsproj -c Release /p:SolutionPackageType=Managed
+```
+
+Outputs are generated under:
+
+- `solution/Html_to_PDF_Component_Solution/bin/Release/`
+
 ## Canvas action commands
 
 Use the `actionCommand` input to trigger actions from Canvas buttons.
@@ -103,25 +121,11 @@ Typical pattern:
 
 See full usage details in `docs/pcf-usage.md`.
 
-## Repository scope (public)
-
-This public repository intentionally includes:
-- PCF source (`pcf/HtmlPdfPrintButton`)
-- Usage docs and examples (`docs/`)
-- Screenshots/media (`docs/media/`)
-
-This public repository intentionally excludes private/internal project files such as:
-- `.context/`
-- AGENTS files
-- internal planning logs
-- private packaging automation scripts
-- internal solution packaging project files (kept in the private source repo)
-
 ## Documentation
 
-- `docs/pcf-usage.md` - full component usage guide (properties, outputs, action commands, Flow contract)
-- `docs/samples/the-boring-cat-one-page-sample.html` - sample HTML input
-- `docs/media/` - screenshots used in this README
+- [PCF usage guide](docs/pcf-usage.md) - properties, outputs, action commands, Flow contract
+- [Solution packaging guide](docs/solution-package.md) - build/import steps and managed/unmanaged outputs
+- [Screenshots and media](docs/media/) - images used in this README
 
 ## Creator
 

@@ -1,9 +1,5 @@
 # PCF Usage (Canvas app)
 
-Public repo note:
-- This repository is source-only by design and does not include the private solution packaging project.
-- Import the PCF into Canvas apps using your own Dataverse solution packaging flow, or a release asset if one is published.
-
 ## What this control does
 - By default (`renderMode=inline`), renders the provided HTML inside the control (iframe) with a **Print** button.
 - Clicking **Print** opens the browser print dialog; the user chooses **Save as PDF**.
@@ -11,7 +7,7 @@ Public repo note:
 - Optional (`renderMode=popup`): opens a popup window and prints from there (legacy behavior).
 
 ## Typical setup (canvas)
-1) Add the PCF code component to your canvas app (via a Dataverse solution package you build or import).
+1) Add the PCF code component to your canvas app (via a Dataverse solution package you build from this repo or import from a release asset).
 2) Set the component `html` input to your HTML string expression/variable.
 3) Configure the component’s appearance inputs (label, size, colors, popup size, optional CSS).
 
