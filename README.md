@@ -6,9 +6,11 @@ Power Apps PCF control for Canvas apps that renders trusted HTML with an inline 
 - Export PDF as Base64 for external data sources (for example SharePoint via Power Automate)
 - Canvas-triggered action commands (`print`, `download`)
 
-![GitHub release](https://img.shields.io/github/v/release/Just-Boring-Cat/html-pdf-converter-pcf?label=release)
-![License](https://img.shields.io/github/license/Just-Boring-Cat/html-pdf-converter-pcf)
-![Last commit](https://img.shields.io/github/last-commit/Just-Boring-Cat/html-pdf-converter-pcf)
+<p align="center">
+  <img alt="GitHub release" src="https://img.shields.io/github/v/release/Just-Boring-Cat/html-pdf-converter-pcf?label=release" />
+  <img alt="License" src="https://img.shields.io/github/license/Just-Boring-Cat/html-pdf-converter-pcf" />
+  <img alt="Last commit" src="https://img.shields.io/github/last-commit/Just-Boring-Cat/html-pdf-converter-pcf" />
+</p>
 
 ## Visual preview
 
