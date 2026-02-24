@@ -18,6 +18,10 @@ PCF rendering:
 
 ![HTML to PDF component preview](docs/media/html-to-pdf-component-0.png)
 
+PCF properties (Canvas app):
+
+![HTML to PDF component properties](docs/media/html-to-pdf-component-1.png)
+
 ### Download PDF action command (Canvas trigger)
 
 Example action command payload from Canvas:
@@ -98,11 +102,33 @@ Supported payload format:
 Power Fx examples:
 
 ```powerfx
-Set(varPdfCmd, "{""id"":""" & GUID() & """,""action"":""print""}")
+Set(
+    varPdfCmd,
+    Concatenate(
+        "{",
+        Substitute(
+            $"'id':'{GUID()}','action':'print'",
+            "'",
+            Char(34)
+        ),
+        "}"
+    )
+);
 ```
 
 ```powerfx
-Set(varPdfCmd, "{""id"":""" & GUID() & """,""action"":""download""}")
+Set(
+    varPdfCmd,
+    Concatenate(
+        "{",
+        Substitute(
+            $"'id':'{GUID()}','action':'download'",
+            "'",
+            Char(34)
+        ),
+        "}"
+    )
+);
 ```
 
 Notes:

@@ -43,9 +43,35 @@
 ## Canvas trigger pattern
 1) Bind the PCF property `ActionCommand` to a variable, for example `varPdfCmd`.
 2) Print button `OnSelect`:
-   `Set(varPdfCmd, "{""id"":""" & GUID() & """,""action"":""print""}")`
+   ```powerfx
+   Set(
+       varPdfCmd,
+       Concatenate(
+           "{",
+           Substitute(
+               $"'id':'{GUID()}','action':'print'",
+               "'",
+               Char(34)
+           ),
+           "}"
+       )
+   );
+   ```
 3) Download button `OnSelect`:
-   `Set(varPdfCmd, "{""id"":""" & GUID() & """,""action"":""download""}")`
+   ```powerfx
+   Set(
+       varPdfCmd,
+       Concatenate(
+           "{",
+           Substitute(
+               $"'id':'{GUID()}','action':'download'",
+               "'",
+               Char(34)
+           ),
+           "}"
+       )
+   );
+   ```
 4) Optional: inspect `MyPdfControl.LastCommandAck` to confirm completion or show errors.
 
 Notes:
