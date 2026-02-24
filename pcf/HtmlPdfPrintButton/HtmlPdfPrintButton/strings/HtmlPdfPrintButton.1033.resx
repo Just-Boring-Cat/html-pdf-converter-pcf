@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <data name="HtmlPdfPrintButton_Display" xml:space="preserve">
+    <value>The Boring Cat - HTML to PDF</value>
+  </data>
+  <data name="HtmlPdfPrintButton_Desc" xml:space="preserve">
+    <value>Renders trusted HTML for print/download actions in Canvas apps and supports optional command triggers.</value>
+  </data>
+
+  <data name="Html_Display_Key" xml:space="preserve">
+    <value>HTML</value>
+  </data>
+  <data name="Html_Desc_Key" xml:space="preserve">
+    <value>Trusted HTML to render in the popup.</value>
+  </data>
+
+  <data name="ButtonLabel_Display_Key" xml:space="preserve">
+    <value>Button label</value>
+  </data>
+  <data name="ButtonLabel_Desc_Key" xml:space="preserve">
+    <value>Text shown on the button.</value>
+  </data>
+
+  <data name="ButtonAppearance_Display_Key" xml:space="preserve">
+    <value>Button appearance</value>
+  </data>
+  <data name="ButtonAppearance_Desc_Key" xml:space="preserve">
+    <value>Fluent appearance: primary, secondary, outline, subtle, transparent.</value>
+  </data>
+
+  <data name="ButtonSize_Display_Key" xml:space="preserve">
+    <value>Button size</value>
+  </data>
+  <data name="ButtonSize_Desc_Key" xml:space="preserve">
+    <value>Fluent size: small, medium, large.</value>
+  </data>
+
+  <data name="ButtonWidth_Display_Key" xml:space="preserve">
+    <value>Button width (px)</value>
+  </data>
+  <data name="ButtonWidth_Desc_Key" xml:space="preserve">
+    <value>Optional fixed width in pixels.</value>
+  </data>
+
+  <data name="ButtonHeight_Display_Key" xml:space="preserve">
+    <value>Button height (px)</value>
+  </data>
+  <data name="ButtonHeight_Desc_Key" xml:space="preserve">
+    <value>Optional fixed height in pixels.</value>
+  </data>
+
+  <data name="ButtonBackgroundColor_Display_Key" xml:space="preserve">
+    <value>Button background color</value>
+  </data>
+  <data name="ButtonBackgroundColor_Desc_Key" xml:space="preserve">
+    <value>Optional CSS color (e.g. #0f6cbd).</value>
+  </data>
+
+  <data name="ButtonTextColor_Display_Key" xml:space="preserve">
+    <value>Button text color</value>
+  </data>
+  <data name="ButtonTextColor_Desc_Key" xml:space="preserve">
+    <value>Optional CSS color (e.g. white or #ffffff).</value>
+  </data>
+
+  <data name="ButtonBorderColor_Display_Key" xml:space="preserve">
+    <value>Button border color</value>
+  </data>
+  <data name="ButtonBorderColor_Desc_Key" xml:space="preserve">
+    <value>Optional CSS color for the border.</value>
+  </data>
+
+  <data name="ButtonBorderWidth_Display_Key" xml:space="preserve">
+    <value>Button border width (px)</value>
+  </data>
+  <data name="ButtonBorderWidth_Desc_Key" xml:space="preserve">
+    <value>Optional border width in pixels.</value>
+  </data>
+
+  <data name="ButtonBorderRadius_Display_Key" xml:space="preserve">
+    <value>Button border radius (px)</value>
+  </data>
+  <data name="ButtonBorderRadius_Desc_Key" xml:space="preserve">
+    <value>Optional border radius in pixels.</value>
+  </data>
+
+  <data name="PopupTitle_Display_Key" xml:space="preserve">
+    <value>Popup title</value>
+  </data>
+  <data name="PopupTitle_Desc_Key" xml:space="preserve">
+    <value>Browser window title for the popup.</value>
+  </data>
+
+  <data name="PopupWidth_Display_Key" xml:space="preserve">
+    <value>Popup width (px)</value>
+  </data>
+  <data name="PopupWidth_Desc_Key" xml:space="preserve">
+    <value>Popup width in pixels.</value>
+  </data>
+
+  <data name="PopupHeight_Display_Key" xml:space="preserve">
+    <value>Popup height (px)</value>
+  </data>
+  <data name="PopupHeight_Desc_Key" xml:space="preserve">
+    <value>Popup height in pixels.</value>
+  </data>
+
+  <data name="AdditionalCss_Display_Key" xml:space="preserve">
+    <value>Additional CSS</value>
+  </data>
+  <data name="AdditionalCss_Desc_Key" xml:space="preserve">
+    <value>Extra CSS appended to the popup document (useful for print styling).</value>
+  </data>
+
+  <data name="LineBreakToken_Display_Key" xml:space="preserve">
+    <value>Line break token</value>
+  </data>
+  <data name="LineBreakToken_Desc_Key" xml:space="preserve">
+    <value>Plain text token replaced with &lt;br /&gt; before preview/print/PDF. Default: &lt;!-- linebreak --&gt;.</value>
+  </data>
+
+  <data name="AutoPrint_Display_Key" xml:space="preserve">
+    <value>Auto print</value>
+  </data>
+  <data name="AutoPrint_Desc_Key" xml:space="preserve">
+    <value>When enabled, automatically opens the print dialog after the popup loads.</value>
+  </data>
+
+  <data name="RenderMode_Display_Key" xml:space="preserve">
+    <value>Render mode</value>
+  </data>
+  <data name="RenderMode_Desc_Key" xml:space="preserve">
+    <value>inline (embed preview) or popup (open a new window).</value>
+  </data>
+
+  <data name="PreviewHeight_Display_Key" xml:space="preserve">
+    <value>Preview height (px)</value>
+  </data>
+  <data name="PreviewHeight_Desc_Key" xml:space="preserve">
+    <value>Optional fixed height for inline preview. Otherwise use the control height.</value>
+  </data>
+
+  <data name="ShowPrintButton_Display_Key" xml:space="preserve">
+    <value>Show print button</value>
+  </data>
+  <data name="ShowPrintButton_Desc_Key" xml:space="preserve">
+    <value>Show or hide the Print button.</value>
+  </data>
+
+  <data name="ShowDownloadButton_Display_Key" xml:space="preserve">
+    <value>Show download button</value>
+  </data>
+  <data name="ShowDownloadButton_Desc_Key" xml:space="preserve">
+    <value>Show or hide the Download PDF button.</value>
+  </data>
+
+  <data name="DownloadButtonLabel_Display_Key" xml:space="preserve">
+    <value>Download button label</value>
+  </data>
+  <data name="DownloadButtonLabel_Desc_Key" xml:space="preserve">
+    <value>Text shown on the Download PDF button.</value>
+  </data>
+
+  <data name="DownloadFileName_Display_Key" xml:space="preserve">
+    <value>Download file name</value>
+  </data>
+  <data name="DownloadFileName_Desc_Key" xml:space="preserve">
+    <value>Downloaded PDF filename (e.g. document.pdf).</value>
+  </data>
+
+  <data name="ActionCommand_Display_Key" xml:space="preserve">
+    <value>Action command (JSON)</value>
+  </data>
+  <data name="ActionCommand_Desc_Key" xml:space="preserve">
+    <value>Canvas trigger command as JSON: {"id":"GUID","action":"print|download"}.</value>
+  </data>
+
+  <data name="LastCommandAck_Display_Key" xml:space="preserve">
+    <value>Last command ack</value>
+  </data>
+  <data name="LastCommandAck_Desc_Key" xml:space="preserve">
+    <value>Output JSON with command result, id, action, status, message, and timestamp.</value>
+  </data>
+
+  <data name="HtmlText_Display_Key" xml:space="preserve">
+    <value>HTML text output</value>
+  </data>
+  <data name="HtmlText_Desc_Key" xml:space="preserve">
+    <value>Rendered HTML text used by the control after lineBreakToken replacement.</value>
+  </data>
+
+  <data name="HtmlTextRaw_Display_Key" xml:space="preserve">
+    <value>Raw HTML text output</value>
+  </data>
+  <data name="HtmlTextRaw_Desc_Key" xml:space="preserve">
+    <value>Original HTML input before lineBreakToken replacement.</value>
+  </data>
+
+  <data name="PdfBase64_Display_Key" xml:space="preserve">
+    <value>PDF base64 output</value>
+  </data>
+  <data name="PdfBase64_Desc_Key" xml:space="preserve">
+    <value>Generated PDF as data URL/base64 text for Canvas and Flow integration.</value>
+  </data>
+
+  <data name="PdfFileName_Display_Key" xml:space="preserve">
+    <value>PDF file name output</value>
+  </data>
+  <data name="PdfFileName_Desc_Key" xml:space="preserve">
+    <value>Generated PDF file name output.</value>
+  </data>
+
+  <data name="PdfStatus_Display_Key" xml:space="preserve">
+    <value>PDF status output</value>
+  </data>
+  <data name="PdfStatus_Desc_Key" xml:space="preserve">
+    <value>Status of PDF generation output: idle, generating, ready, or error.</value>
+  </data>
+</root>

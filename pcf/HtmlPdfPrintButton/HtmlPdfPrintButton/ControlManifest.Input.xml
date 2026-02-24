@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<manifest>
+  <!--
+    Creator: Harllens George de la Cruz - The Boring Cat
+    Website: https://theboringcat.com/
+    The Boring Cat is a central hub for building, experimenting, and sharing.
+    It collects projects, tools, documentation, and practical notes from real delivery work.
+  -->
+  <control namespace="TheBoringCat" constructor="HtmlToPdfComponent" version="0.0.11" display-name-key="HtmlPdfPrintButton_Display" description-key="HtmlPdfPrintButton_Desc" control-type="virtual" >
+    <!--external-service-usage node declares whether this 3rd party PCF control is using external service or not, if yes, this control will be considered as premium and please also add the external domain it is using.
+    If it is not using any external service, please set the enabled="false" and DO NOT add any domain below. The "enabled" will be false by default.
+    Example1:
+      <external-service-usage enabled="true">
+        <domain>www.Microsoft.com</domain>
+      </external-service-usage>
+    Example2:
+      <external-service-usage enabled="false">
+      </external-service-usage>
+    -->
+    <external-service-usage enabled="false">
+      <!--UNCOMMENT TO ADD EXTERNAL DOMAINS
+      <domain></domain>
+      <domain></domain>
+      -->
+    </external-service-usage>
+    <!-- property node identifies a specific, configurable piece of data that the control expects from CDS -->
+    <property name="html" display-name-key="Html_Display_Key" description-key="Html_Desc_Key" of-type="SingleLine.TextArea" usage="input" required="true" />
+
+    <property name="buttonLabel" display-name-key="ButtonLabel_Display_Key" description-key="ButtonLabel_Desc_Key" of-type="SingleLine.Text" usage="input" required="false" default-value="Print" />
+    <property name="buttonAppearance" display-name-key="ButtonAppearance_Display_Key" description-key="ButtonAppearance_Desc_Key" of-type="SingleLine.Text" usage="input" required="false" default-value="primary" />
+    <property name="buttonSize" display-name-key="ButtonSize_Display_Key" description-key="ButtonSize_Desc_Key" of-type="SingleLine.Text" usage="input" required="false" default-value="medium" />
+    <property name="buttonWidth" display-name-key="ButtonWidth_Display_Key" description-key="ButtonWidth_Desc_Key" of-type="Whole.None" usage="input" required="false" />
+    <property name="buttonHeight" display-name-key="ButtonHeight_Display_Key" description-key="ButtonHeight_Desc_Key" of-type="Whole.None" usage="input" required="false" />
+    <property name="buttonBackgroundColor" display-name-key="ButtonBackgroundColor_Display_Key" description-key="ButtonBackgroundColor_Desc_Key" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="buttonTextColor" display-name-key="ButtonTextColor_Display_Key" description-key="ButtonTextColor_Desc_Key" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="buttonBorderColor" display-name-key="ButtonBorderColor_Display_Key" description-key="ButtonBorderColor_Desc_Key" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="buttonBorderWidth" display-name-key="ButtonBorderWidth_Display_Key" description-key="ButtonBorderWidth_Desc_Key" of-type="Whole.None" usage="input" required="false" />
+    <property name="buttonBorderRadius" display-name-key="ButtonBorderRadius_Display_Key" description-key="ButtonBorderRadius_Desc_Key" of-type="Whole.None" usage="input" required="false" />
+
+    <property name="popupTitle" display-name-key="PopupTitle_Display_Key" description-key="PopupTitle_Desc_Key" of-type="SingleLine.Text" usage="input" required="false" default-value="Document" />
+    <property name="popupWidth" display-name-key="PopupWidth_Display_Key" description-key="PopupWidth_Desc_Key" of-type="Whole.None" usage="input" required="false" default-value="1000" />
+    <property name="popupHeight" display-name-key="PopupHeight_Display_Key" description-key="PopupHeight_Desc_Key" of-type="Whole.None" usage="input" required="false" default-value="800" />
+    <property name="additionalCss" display-name-key="AdditionalCss_Display_Key" description-key="AdditionalCss_Desc_Key" of-type="SingleLine.TextArea" usage="input" required="false" />
+    <property name="lineBreakToken" display-name-key="LineBreakToken_Display_Key" description-key="LineBreakToken_Desc_Key" of-type="SingleLine.Text" usage="input" required="false" default-value="&lt;!-- linebreak --&gt;" />
+    <property name="autoPrint" display-name-key="AutoPrint_Display_Key" description-key="AutoPrint_Desc_Key" of-type="TwoOptions" usage="input" required="false" default-value="false" />
+
+    <property name="renderMode" display-name-key="RenderMode_Display_Key" description-key="RenderMode_Desc_Key" of-type="SingleLine.Text" usage="input" required="false" default-value="inline" />
+    <property name="previewHeight" display-name-key="PreviewHeight_Display_Key" description-key="PreviewHeight_Desc_Key" of-type="Whole.None" usage="input" required="false" />
+
+    <property name="showPrintButton" display-name-key="ShowPrintButton_Display_Key" description-key="ShowPrintButton_Desc_Key" of-type="TwoOptions" usage="input" required="false" default-value="true" />
+    <property name="showDownloadButton" display-name-key="ShowDownloadButton_Display_Key" description-key="ShowDownloadButton_Desc_Key" of-type="TwoOptions" usage="input" required="false" default-value="false" />
+    <property name="downloadButtonLabel" display-name-key="DownloadButtonLabel_Display_Key" description-key="DownloadButtonLabel_Desc_Key" of-type="SingleLine.Text" usage="input" required="false" default-value="Download PDF" />
+    <property name="downloadFileName" display-name-key="DownloadFileName_Display_Key" description-key="DownloadFileName_Desc_Key" of-type="SingleLine.Text" usage="input" required="false" default-value="document.pdf" />
+    <property name="actionCommand" display-name-key="ActionCommand_Display_Key" description-key="ActionCommand_Desc_Key" of-type="SingleLine.Text" usage="input" required="false" />
+    <property name="lastCommandAck" display-name-key="LastCommandAck_Display_Key" description-key="LastCommandAck_Desc_Key" of-type="SingleLine.Text" usage="output" required="false" />
+    <property name="htmlText" display-name-key="HtmlText_Display_Key" description-key="HtmlText_Desc_Key" of-type="SingleLine.TextArea" usage="output" required="false" />
+    <property name="htmlTextRaw" display-name-key="HtmlTextRaw_Display_Key" description-key="HtmlTextRaw_Desc_Key" of-type="SingleLine.TextArea" usage="output" required="false" />
+    <property name="pdfBase64" display-name-key="PdfBase64_Display_Key" description-key="PdfBase64_Desc_Key" of-type="SingleLine.TextArea" usage="output" required="false" />
+    <property name="pdfFileName" display-name-key="PdfFileName_Display_Key" description-key="PdfFileName_Desc_Key" of-type="SingleLine.Text" usage="output" required="false" />
+    <property name="pdfStatus" display-name-key="PdfStatus_Display_Key" description-key="PdfStatus_Desc_Key" of-type="SingleLine.Text" usage="output" required="false" />
+    <!--
+      Property node's of-type attribute can be of-type-group attribute.
+      Example:
+      <type-group name="numbers">
+        <type>Whole.None</type>
+        <type>Currency</type>
+        <type>FP</type>
+        <type>Decimal</type>
+      </type-group>
+      <property name="sampleProperty" display-name-key="Property_Display_Key" description-key="Property_Desc_Key" of-type-group="numbers" usage="bound" required="true" />
+    -->
+    <resources>
+      <code path="index.ts" order="1"/>
+      <platform-library name="React" version="16.14.0" />
+      <resx path="strings/HtmlPdfPrintButton.1033.resx" version="1.0.0" />
+    </resources>
+    <!-- UNCOMMENT TO ENABLE THE SPECIFIED API
+    <feature-usage>
+      <uses-feature name="Device.captureAudio" required="true" />
+      <uses-feature name="Device.captureImage" required="true" />
+      <uses-feature name="Device.captureVideo" required="true" />
+      <uses-feature name="Device.getBarcodeValue" required="true" />
+      <uses-feature name="Device.getCurrentPosition" required="true" />
+      <uses-feature name="Device.pickFile" required="true" />
+      <uses-feature name="Utility" required="true" />
+      <uses-feature name="WebAPI" required="true" />
+    </feature-usage>
+    -->
+  </control>
+</manifest>
